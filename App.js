@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app titta det funkar!</Text>
-      <Text>Mera text nu med en förändring ytterligare text</Text>
+      <Text>Mera text nu med en förändring ytterligare text... oj vad mycket text</Text>
       <StatusBar style="auto" />
     </View>
   );
