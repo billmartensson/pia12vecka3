@@ -1,11 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
+import Fancybox from './Fancybox';
+import { useState } from 'react';
 
 export default function App() {
+
+  const [addname, onAddname] = useState("NAMN");
+
+  const [people, setPeople] = useState([{key: 'Xerxes', lastname: "Xerxessson"}]);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app titta det funkar!</Text>
-      <Text>Mera text nu med en förändring ytterligare text... oj vad mycket text</Text>
+      <Text>Hej</Text>
+
+      <TextInput onChange={onAddname} value={addname} />
+
+      <Button title='Lägg till' onPress={() => {
+        var oldpeople = people;
+        oldpeople.push({key: addname, lastname: addname});
+        setPeople(oldpeople);
+      }} />
+      
+      <FlatList
+        data={people}
+        renderItem={({item}) => <Fancybox />}
+      />
+
+
+
       <StatusBar style="auto" />
     </View>
   );
@@ -17,5 +39,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#00ff00',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 100
   },
 });
