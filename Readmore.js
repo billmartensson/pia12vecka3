@@ -8,13 +8,19 @@ export default function Readmore({navigation, route}) {
 
   return (
     <View>
-      <Text>READ MORE {route.params.fruit} </Text>
+      <Text>READ MORE {route.params.person.lastname} </Text>
 
       <Text>{readnumber}</Text>
 
       <Button title='PLUS' onPress={() => {
         setReadnumber(readnumber + 1);
       }} />
+
+
+      <Button title='Gå tredje vyn' onPress={() => {
+        navigation.navigate("Tredje");
+      }} />
+
 
     </View>
   );

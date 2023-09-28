@@ -6,6 +6,7 @@ import Readmore from './Readmore';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Welcome from './Welcome';
+import ThirdView from './ThirdView';
 
 export default function App() {
 
@@ -18,6 +19,8 @@ export default function App() {
         <Stack.Screen name='Starten' component={Welcome} />
 
         <Stack.Screen name='Läsmer' component={Readmore} />
+
+        <Stack.Screen name='Tredje' component={ThirdView} />
 
       </Stack.Navigator>
     </NavigationContainer>
