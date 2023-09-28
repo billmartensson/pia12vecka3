@@ -23,7 +23,7 @@ export default function Welcome({navigation}) {
     <View style={styles.container}>
         
         <Button title='Läsa mera' onPress={() => {
-            navigation.navigate("Läsmer", {fruit: "Papaya"});
+            navigation.navigate("Läsmer", {person: {key: 'Xerxes', lastname: "ABCsson"}});
         }} />
 
         <TouchableOpacity onPress={() => {
